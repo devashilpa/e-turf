@@ -13,15 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('addturves', function (Blueprint $table) {
+        Schema::create('admin_galleries', function (Blueprint $table) {
             $table->id();
-            $table->string('turf_name');
-            $table->string('turf_type');
-            $table->string('location');
+            $table->string('image');
             $table->string('description');
-            $table->biginteger('rate');
-            $table->string('manager')->unique();
-            $table->string('status')->default('not defined');
             $table->timestamps();
         });
     }
@@ -33,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('addturves');
+        Schema::dropIfExists('admin_galleries');
     }
 };

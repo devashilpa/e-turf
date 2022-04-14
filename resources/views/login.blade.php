@@ -18,6 +18,9 @@
                 <div class="form-group">
                     <input type="submit" value="LOG IN" name="login" id="login" class="btn btn-warning btn-md">
                 </div>
+                @if(session('error'))
+               <p style="color:red">
+            {{session('error')}}</p>@endif
         </form>
     </center>
 </div>

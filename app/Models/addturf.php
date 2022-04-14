@@ -20,4 +20,17 @@ public function viewTurf($table)
 {
  return DB::table($table)->get();
 }
+public function viewturfData($table)
+{
+   return DB::table($table)->get();
+}
+public function viewB($table)
+
+{
+    return DB::table($table)->get();
+}
+public function data($table,$id)
+{
+return DB::table($table)->where('id',$id)->get();
+}
 }

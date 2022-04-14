@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('addturves', function (Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->string('turf_name');
-            $table->string('turf_type');
-            $table->string('location');
-            $table->string('description');
-            $table->biginteger('rate');
-            $table->string('manager')->unique();
+            $table->integer('uid');
+            $table->biginteger('card_number');
+            $table->string('holder_name');
+            $table->biginteger('amount');
+            $table->date('expdate');
+            $table->biginteger('cvv');
             $table->string('status')->default('not defined');
             $table->timestamps();
         });
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('addturves');
+        Schema::dropIfExists('payments');
     }
 };

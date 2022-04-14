@@ -1,12 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\models\adminGallery;
 use Illuminate\Http\Request;
 use Auth;
 
 class indexController extends Controller
 {
+    public function __construct()
+    {
+        $this->obj8 = new adminGallery;
+    }
    public function register()
    {
      return view('register');
@@ -39,6 +43,10 @@ class indexController extends Controller
    {
        Auth::logout();
        return redirect('/');
-
+   }
+   public function igallery()
+   {
+    $data['result']=$this->obj8->indexGallery('admin_galleries');
+     return view('igallery',$data);
    }
 }

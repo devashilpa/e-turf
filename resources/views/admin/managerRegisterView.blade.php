@@ -2,7 +2,7 @@
 @section('mainbody')
 
 <center>
-<table border="3px" class="table-hover table-danger">
+<table class="table-hover table-success table-striped table-borderless">
 <tr>
     <th style="padding:20px;">Name</th>
     <th style="padding:20px;">Contact Number</th>

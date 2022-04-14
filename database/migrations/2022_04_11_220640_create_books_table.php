@@ -13,15 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('addturves', function (Blueprint $table) {
+        Schema::create('books', function (Blueprint $table) {
             $table->id();
+            $table->string('uid');
             $table->string('turf_name');
             $table->string('turf_type');
+            $table->string('rate');
             $table->string('location');
-            $table->string('description');
-            $table->biginteger('rate');
-            $table->string('manager')->unique();
-            $table->string('status')->default('not defined');
+            $table->date('date');
+            $table->time('time');
+            $table->string('status')->default('booked');
             $table->timestamps();
         });
     }
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('addturves');
+        Schema::dropIfExists('books');
     }
 };

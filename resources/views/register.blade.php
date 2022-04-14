@@ -19,10 +19,10 @@
                 <label for="email">E-Mail:</label>
                 <input type="email" name="email" id="email" class="form-control">
            </div>
-            <div class="form-group">
+          <iv class="form-group">
                     <label for="gender">Gender:</label>
-                male <input type="radio" name="gender" id="gender1" >
-                female  <input type="radio" name="gender" id="gender1" >
+                male <input type="radio" name="gender" id="gender1"value="male">
+                female  <input type="radio" name="gender" id="gender1" value="female" >
             </div>
            <div class="form-group">
                     <label for="user_name">User Name:</label>

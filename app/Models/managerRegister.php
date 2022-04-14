@@ -21,4 +21,20 @@ class managerRegister extends Model
     {
         return DB::table($table)->where('id',$id)->update($data);
     }
+    public function managerloginData($table,$user_name,$password)
+    {
+        return DB::table($table)->where('user_name',$user_name)->where('password',$password)->first();
+    }
+    public function managerview($table,$id)
+    {
+      return DB::table($table)->where('id',$id)->get();
+    }
+    // public function managerReg($table,$id)
+    // {
+    //  return DB::table($table)->where(id,$id)->get();
+    // }
+    public function manager($table,$id)
+    {
+        return DB::table($table)->where('id',$id)->get();
+    }
 }

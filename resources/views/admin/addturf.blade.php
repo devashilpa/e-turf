@@ -14,6 +14,14 @@
              <input type="text" name="turf_name" id="turf_name" class="form-control">
          </div>
          <div class="form-group">
+             <label for="turf_type">Turf Type:</label>
+             <input type="text" name="turf_type" id="turf_type" class="form-control">
+         </div>
+         <div class="form-group">
+             <label for="escription">Description:</label>
+      <textarea name="description" id="description" class="form-control"></textarea>
+         </div>
+         <div class="form-group">
              <label for="location">Location:</label>
              <input type="text" name="location" id="location" class="form-control">
          </div>
